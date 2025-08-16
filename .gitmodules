@@ -1,3 +1,3 @@
 [submodule "3rdparty/liblsl"]
 	path = 3rdparty/liblsl
-	url = https://github.com/sccn/liblsl
+	url = https://github.com/jcelerier/liblsl
