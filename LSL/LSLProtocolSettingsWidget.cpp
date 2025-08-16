@@ -208,7 +208,7 @@ void LSLProtocolSettingsWidget::populateInboundTree()
 
     item->setCheckState(
         0,
-        (selectedUids.contains(uid)
+        (selectedUids.contains(QString::fromStdString(uid))
          || ossia::contains(m_settings.subscribedStreams, uid))
             ? Qt::Checked
             : Qt::Unchecked);
