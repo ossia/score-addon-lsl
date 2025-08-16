@@ -88,7 +88,6 @@ void lsl_context::discovery_thread()
 
       lsl_stream_map new_streams;
 
-      qDebug() << "found streams: " << streams.size();
       for(auto& info : streams)
       {
         lsl_stream_data stream;

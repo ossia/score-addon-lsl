@@ -63,7 +63,6 @@ bool LSLProtocolFactory::checkCompatibility(
     const Device::DeviceSettings& a,
     const Device::DeviceSettings& b) const noexcept
 {
-  qDebug("bah?");
   return true;
 }
 }
