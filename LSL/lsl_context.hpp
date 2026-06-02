@@ -3,6 +3,8 @@
 #include <ossia/detail/triple_buffer.hpp>
 #include <ossia/network/context.hpp>
 
+#include <LSL/lsl_structs.hpp>
+
 #include <lsl_cpp.h>
 
 #include <atomic>
