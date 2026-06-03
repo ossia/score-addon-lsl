@@ -1,5 +1,8 @@
 #pragma once
 
+#include <ossia/network/common/parameter_properties.hpp>
+#include <ossia/network/domain/domain.hpp>
+
 #include <lsl_cpp.h>
 namespace lsl_protocol
 {
