@@ -8,6 +8,18 @@ block()
   set(LSL_ADDITIONAL_TARGETS 0)
   set(LSL_OPTIMIZATIONS 0)
   set(LSL_BUNDLED_BOOST 0)
+
+  # Target the same Windows version as the rest of score.
+  #
+  # liblsl defaults LSL_WINVER to 0x0601 and applies it as _WIN32_WINNT to its
+  # targets, so without this its translation units are built for Windows 7
+  # while everything around them is built for Windows 10. That is not just a
+  # stale floor: Asio reads _WIN32_WINNT to decide what it may use, notably
+  # ASIO_HAS_STD_ATOMIC_WAIT, so the standalone Asio bundled here ends up
+  # configured differently from the Boost.Asio in libossia even though the two
+  # meet in the same binary.
+  set(LSL_WINVER "0x0A00")
+
   add_subdirectory(3rdparty/liblsl)
 endblock()
 
