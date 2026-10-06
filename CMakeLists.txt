@@ -61,4 +61,12 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 )
 
 # Target-specific options
+if(COMMAND score_register_license)
+  score_register_license(liblsl URL "https://github.com/sccn/liblsl" FILES "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/liblsl/LICENSE")
+  if(LSL_BUNDLED_PUGIXML)
+    score_register_license(pugixml URL "https://pugixml.org" NOTICES "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/liblsl/thirdparty/pugixml/pugixml.hpp")
+  endif()
+  score_register_license(Loguru URL "https://github.com/emilk/loguru" HEADER "Public domain")
+endif()
+
 setup_score_plugin(${PROJECT_NAME})
