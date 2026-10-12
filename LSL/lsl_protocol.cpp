@@ -199,8 +199,8 @@ std::string lsl_protocol::create_outlet(
     outlet_data outlet_data;
     outlet_data.outlet = std::make_unique<lsl::stream_outlet>(info);
     
-    // Get the UID
-    std::string uid = info.uid();
+    // liblsl assigns the UID to the outlet's own copy of the info
+    std::string uid = outlet_data.outlet->info().uid();
     
     if (channel_info.empty())
     {
