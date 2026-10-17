@@ -11,12 +11,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # ossia score addon: dev tree + SDK (latest/continuous) + JIT.
-  #
-  # release is off: the release track runs ./release.sh, which this addon does
-  # not have. Flip it back on once the addon ships release.sh + addon.json.
   ci:
     uses: ossia/actions/.github/workflows/score-addon.yml@master
     secrets: inherit
     with:
+      jit: false
       release: false

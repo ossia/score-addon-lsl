@@ -13,7 +13,7 @@ block()
   set(LSL_INSTALL 0)
   set(LSL_ADDITIONAL_TARGETS 0)
   set(LSL_OPTIMIZATIONS 0)
-  set(LSL_BUNDLED_BOOST 0)
+  set(LSL_BUNDLED_BOOST 1)
 
   # Target the same Windows version as the rest of score.
   #
@@ -56,6 +56,8 @@ add_library(${PROJECT_NAME} ${SRCS} ${HDRS})
 
 # Link
 target_link_libraries(${PROJECT_NAME} PUBLIC 
+  score_lib_state
+  score_lib_device
   score_plugin_deviceexplorer
   LSL::lsl
 )
