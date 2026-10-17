@@ -1,0 +1,11 @@
+{
+  "src": "<url to the .zip file created by the release script>",
+  "name": "LSL",
+  "raw_name": "score-addon-lsl",
+  "version": "1.0",
+  "kind": "addon",
+  "short": "Lab Streaming Layer",
+  "long": "Lab Streaming Layer (LSL) device: receive and send LSL streams",
+  "small": "https://raw.githubusercontent.com/OSSIA/score-addon-tutorial/master/Deployment/icon.png",
+  "key": "391fa168-0be3-4cfe-9cf5-4fd9cd2337b1"
+}
