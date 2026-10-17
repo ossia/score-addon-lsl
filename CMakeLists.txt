@@ -56,6 +56,8 @@ add_library(${PROJECT_NAME} ${SRCS} ${HDRS})
 
 # Link
 target_link_libraries(${PROJECT_NAME} PUBLIC 
+  score_lib_state
+  score_lib_device
   score_plugin_deviceexplorer
   LSL::lsl
 )
